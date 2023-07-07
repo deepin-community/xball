@@ -1,0 +1,100 @@
+From 2dcce9520511cdecc93dec2566b8b2152c09eb9c Mon Sep 17 00:00:00 2001
+From: Jari Aalto <jari.aalto@cante.net>
+Date: Sat, 8 May 2010 22:56:08 +0300
+Subject: [PATCH] Fix spelling
+Organization: Private
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Signed-off-by: Jari Aalto <jari.aalto@cante.net>
+---
+ XBall.ad    |    2 +-
+ fallback.h  |    4 ++--
+ item.c      |    2 +-
+ menu.c      |    4 ++--
+ xball_sys.c |    2 +-
+ 5 files changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/XBall.ad b/XBall.ad
+index 9f94518..6f15368 100644
+--- a/XBall.ad
++++ b/XBall.ad
+@@ -390,7 +390,7 @@ provided \"as is\" without express or implied warranty. \
+ !   ToggleButton - Push it and toggle the state
+ !   Separator    - A line in the menu
+ !
+-! Avaliable menuCallbackNames avaliable (none take optional parameters):
++! Avaliable menuCallbackNames available (none take optional parameters):
+ !   runDemo       - Lets user select a demo and run the demo
+ !   loadBitmap    - Lets user load a bitmap file
+ !   quit          - quits xball program
+diff --git a/fallback.h b/fallback.h
+index 0865792..dc68590 100644
+--- a/fallback.h
++++ b/fallback.h
+@@ -385,12 +385,12 @@ provided \"as is\" without express or implied warranty. \
+ "! Note that the pulldownName of 'help' is automatically used as the help ",
+ "! pulldown.",
+ "!",
+-"! Avaliable WidgetClasses are:",
++"! Available WidgetClasses are:",
+ "!   PushButton   - push it and cause the action",
+ "!   ToggleButton - Push it and toggle the state",
+ "!   Separator    - A line in the menu",
+ "!",
+-"! Avaliable menuCallbackNames avaliable (none take optional parameters):",
++"! Available menuCallbackNames available (none take optional parameters):",
+ "!   runDemo       - Lets user select a demo and run the demo",
+ "!   loadBitmap    - Lets user load a bitmap file",
+ "!   quit          - quits xball program",
+diff --git a/item.c b/item.c
+index 07125c9..c721e52 100644
+--- a/item.c
++++ b/item.c
+@@ -98,7 +98,7 @@ int y_vel;
+     item->display = static_data->display;
+     item->window  = static_data->window;
+ 
+-    /* Draw with the next avaliable pixmap image (color) */
++    /* Draw with the next available pixmap image (color) */
+     static_data->curr_pixmap = 
+         (static_data->curr_pixmap + 1) % static_data->num_colors;
+ 
+diff --git a/menu.c b/menu.c
+index 996159d..b1f66f6 100644
+--- a/menu.c
++++ b/menu.c
+@@ -132,7 +132,7 @@ menu_type menu;
+ }
+ 
+ 
+-/* Registers an avaliable callback.  This callback can then be
++/* Registers an available callback.  This callback can then be
+    referenced by the menu definition resource.  If the callback is
+    referenced, the menuCallbackProc is invoked. */
+ void menu__add_callback( menu, action_name, menu_callback_proc, user_data)
+@@ -141,7 +141,7 @@ char            *action_name;
+ menuCallbackProc menu_callback_proc;
+ caddr_t          user_data;
+ {
+-    /* Store avaliable callback into table */
++    /* Store available callback into table */
+     menuCallback *menu_node = XtNew( menuCallback);
+     
+ 
+diff --git a/xball_sys.c b/xball_sys.c
+index 70fd1ae..ee2e4a4 100644
+--- a/xball_sys.c
++++ b/xball_sys.c
+@@ -128,7 +128,7 @@ Widget w;
+     scrollbar__set_value( xball_system->elasticity_bar, res_data.elasticity);
+ 
+ 
+-    /* Register avaliable menu callbacks */
++    /* Register available menu callbacks */
+ 
+     menu__add_callback(menu, "runDemo",  demo__run_mcb,  demo);
+     menu__add_callback(menu, "stopDemo", demo__stop_mcb, demo);
+-- 
+1.7.0
+

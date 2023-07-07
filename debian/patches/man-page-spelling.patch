@@ -1,0 +1,22 @@
+From: Markus Koschany <apo@debian.org>
+Date: Wed, 13 Sep 2017 05:39:26 +0200
+Subject: man page spelling
+
+Fix a minor spelling mistake in xball.man.
+---
+ xball.man | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/xball.man b/xball.man
+index 866c4b6..9bf8607 100644
+--- a/xball.man
++++ b/xball.man
+@@ -28,7 +28,7 @@ run demo which create and manipulate the balls in various ways.
+ Documentation is included on-line via the Help menu and is not
+ reproduced here.
+ .SH OPTIONS
+-Run xball \-help for a decription of the command line options
++Run xball \-help for a description of the command line options
+ .SH DEMOS
+ Several demo files are included with the distribution.  To run all the
+ demos, run 'run_demos'.

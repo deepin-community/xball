@@ -1,4 +1,19 @@
 #!/usr/bin/make -f
 
+# Don't remove this line otherwise the game will segfault with newer C
+# standards. This issue surfaced with the switch to GCC 7. Please fix the code.
+export DEB_CFLAGS_MAINT_APPEND = -std=gnu89
+
+include /usr/share/dpkg/pkg-info.mk
+
 %:
 	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+		--prefix=/usr \
+		--bindir=/usr/games \
+		--datadir=/usr/share/games/xball
+
+override_dh_auto_build:
+	dh_auto_build -- VERSION=$(DEB_VERSION_UPSTREAM)

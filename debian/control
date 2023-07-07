@@ -1,15 +1,25 @@
-Source: template-repository
-Section: unknown
+Source: xball
+Section: games
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Build-Depends:
+ debhelper (>= 10),
+ libmotif-dev,
+ libxmu-dev,
+ libxt-dev,
+ xutils-dev
+Standards-Version: 4.1.0
+Homepage: https://tracker.debian.org/pkg/xball
 
-Package: template-repository
+Package: xball
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: Simulate bouncing balls in a window
+ A simple educational game that simulates bouncing balls in a window. Gravity,
+ elasticity, and ability to collide can all be adjusted.
+ .
+ Young children enjoy watching the balls bounce around the screen and are
+ fascinated by the program. This is an ideal program for teaching rudimentary
+ mouse skills to very young children.
