@@ -1,0 +1,62 @@
+From a2df291bafedaf7f5b99677ef3e3b827f5843e32 Mon Sep 17 00:00:00 2001
+From: Jari Aalto <jari.aalto@cante.net>
+Date: Sat, 8 May 2010 23:00:54 +0300
+Subject: [PATCH] xball.man: Misc fixes
+Organization: Private
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Signed-off-by: Jari Aalto <jari.aalto@cante.net>
+---
+ xball.man |   18 +++++++++---------
+ 1 files changed, 9 insertions(+), 9 deletions(-)
+
+diff --git a/xball.man b/xball.man
+index 0dea7eb..866c4b6 100644
+--- a/xball.man
++++ b/xball.man
+@@ -3,19 +3,19 @@
+ xball \- bounce balls on the screen
+ .SH SYNOPSIS
+ .B xball
+-[ -help -delay
++[ \-help \-delay
+ .I delay
+--gravity
++\-gravity
+ .I percent-gravity
+--elasticity
++\-elasticity
+ .I percent-elasticity
+--itemWidth
++\-itemWidth
+ .I ball-width
+--itemHeight
++\-itemHeight
+ .I ball-height
+--collide -perpetual -haltSim -demoFile
++\-collide \-perpetual \-haltSim \-demoFile
+ .I demo-file
+--rgbTxt
++\-rgbTxt
+ .I rgb.txt-file
+ ]
+ [XToolkit options]
+@@ -28,12 +28,12 @@ run demo which create and manipulate the balls in various ways.
+ Documentation is included on-line via the Help menu and is not
+ reproduced here.
+ .SH OPTIONS
+-Run xball -help for a decription of the command line options
++Run xball \-help for a decription of the command line options
+ .SH DEMOS
+ Several demo files are included with the distribution.  To run all the
+ demos, run 'run_demos'.
+ .SH RESOURCES
+-Most resources are avaliable for user modification.  See the XBall
++Most resources are available for user modification.  See the XBall
+ app-defaults file for a complete listing of widgets,
+ .sp
+ Following is a list of the most useful resources:
+-- 
+1.7.0
+

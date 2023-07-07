@@ -1,0 +1,3 @@
+debian/xball.desktop usr/share/applications
+debian/xball.png /usr/share/icons/hicolor/32x32/apps
+demo[0-9]* *.xbm run_demos /usr/share/games/xball/

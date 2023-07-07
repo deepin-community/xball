@@ -1,0 +1,8 @@
+xball
+*.o
+autom4te.cache
+.deps
+Makefile
+config.log
+config.status
+
